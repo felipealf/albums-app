@@ -1,50 +1,78 @@
-# Welcome to your Expo app 👋
+# 📱 Albums App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo mobile em **React Native (Expo + Expo Router)** que consome
+dados de uma API REST baseada no **JSONPlaceholder**, simulada via [My
+JSON Server](https://my-json-server.typicode.com/).
 
-## Get started
+O app possui 3 telas principais:
 
-1. Install dependencies
+-   **Lista de Usuários** → carrega todos os usuários.
+-   **Lista de Álbuns** → mostra os álbuns do usuário selecionado.
+-   **Lista de Fotos** → exibe as fotos do álbum selecionado.
 
-   ```bash
-   npm install
-   ```
+------------------------------------------------------------------------
 
-2. Start the app
+## 🚀 Tecnologias
 
-   ```bash
-   npx expo start
-   ```
+-   [React Native](https://reactnative.dev/) + [Expo](https://expo.dev/)
+-   [Expo Router](https://expo.github.io/router/docs/)
+-   [My JSON Server](https://my-json-server.typicode.com/)
+-   Componentes customizados (Card, Header, ErrorState, etc.)
+-   Hooks (`useFetch` para consumo de API)
 
-In the output, you'll find options to open the app in a
+------------------------------------------------------------------------
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🗂 Estrutura de Pastas
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+    app/
+     ├─ _layout.tsx          # Layout principal (Stack Navigator)
+     ├─ index.tsx            # Lista de usuários
+     ├─ albums/[userId].js   # Lista de álbuns do usuário
+     └─ photos/[albumId].js  # Lista de fotos do álbum
+    components/              # Componentes reutilizáveis
+    hooks/                   # Hook customizado (useFetch)
+    api/                     # Configuração da API
 
-## Get a fresh project
+------------------------------------------------------------------------
 
-When you're ready, run:
+## ⚙️ Instalação e Execução
 
-```bash
-npm run reset-project
+Clone este repositório e instale as dependências:
+
+``` bash
+git clone https://github.com/<SEU_USUARIO>/<SEU_REPO>.git
+cd <SEU_REPO>
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Inicie o projeto com Expo:
 
-## Learn more
+``` bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+-   Pressione **a** → abrir em emulador Android\
+-   Pressione **i** → abrir em simulador iOS\
+-   Escaneie o QR Code com o app **Expo Go** no celular
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+------------------------------------------------------------------------
 
-## Join the community
+## 🌐 API utilizada
 
-Join our community of developers creating universal apps.
+Este projeto utiliza o [My JSON
+Server](https://my-json-server.typicode.com/) para disponibilizar dados
+sem precisar rodar servidor local.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Base URL da API:
+
+    https://my-json-server.typicode.com/<SEU_USUARIO>/<SEU_REPO>
+
+Exemplos de endpoints: - `/users` - `/albums?userId=1` -
+`/photos?albumId=1`
+
+------------------------------------------------------------------------
+
+## 📄 Licença
+
+Este projeto é apenas para fins acadêmicos/didáticos.\
+Desenvolvido por **Felipe Almeida de Freitas** ✨
