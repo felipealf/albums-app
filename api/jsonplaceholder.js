@@ -1,4 +1,4 @@
-export const API = "http://192.168.1.3:3001"; //"https://jsonplaceholder.typicode.com";
+export const API = "https://my-json-server.typicode.com/felipealf/albums-app";
 
 export async function apiGet(path, params) {
     const url = new URL(API + path);
