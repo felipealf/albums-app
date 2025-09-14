@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "Sincere@april.biz",
+      "company": { "name": "Romaguera-Crona" }
+    },
+    {
+      "id": 2,
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "email": "Shanna@melissa.tv",
+      "company": { "name": "Deckow-Crist" }
+    }
+  ],
+  "albums": [
+    { "userId": 1, "id": 1, "title": "Album de Leanne 1" },
+    { "userId": 1, "id": 2, "title": "Album de Leanne 2" },
+    { "userId": 2, "id": 3, "title": "Album de Ervin 1" }
+  ],
+  "photos": [
+    {
+      "albumId": 1,
+      "id": 1,
+      "title": "Foto 1",
+      "url": "https://picsum.photos/id/237/600/600",
+      "thumbnailUrl": "https://picsum.photos/id/237/150/150"
+    },
+    {
+      "albumId": 1,
+      "id": 2,
+      "title": "Foto 2",
+      "url": "https://picsum.photos/id/238/600/600",
+      "thumbnailUrl": "https://picsum.photos/id/238/150/150"
+    },
+    {
+      "albumId": 2,
+      "id": 3,
+      "title": "Foto 3",
+      "url": "https://picsum.photos/id/239/600/600",
+      "thumbnailUrl": "https://picsum.photos/id/239/150/150"
+    },
+    {
+      "albumId": 3,
+      "id": 4,
+      "title": "Foto 4",
+      "url": "https://picsum.photos/id/240/600/600",
+      "thumbnailUrl": "https://picsum.photos/id/240/150/150"
+    }
+  ]
+}
